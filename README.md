@@ -21,7 +21,7 @@ data <- read.csv("Offer_Report.csv")
 # DateTime in Date format
 data$DateTime <- as.POSIXct(data$DateTime, format="%m/%d/%Y %H:%M")
 
-# Summartize (Pivot)
+# Summarize (Pivot)
 data_summary <- data %>%
   group_by(Request) %>%
   summarise(Time_Min=min(DateTime),
